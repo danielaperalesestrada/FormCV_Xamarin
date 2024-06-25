@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="YourNamespace.MainPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="10">
+                <Label Text="Formulario" FontSize="24" HorizontalOptions="Center"/>
+                
+                <Label Text="Nombre y Apellidos:"/>
+                <Entry x:Name="NombreEntry"/>
+
+                <Label Text="Fecha de nacimiento:"/>
+                <DatePicker x:Name="FechaPicker"/>
+
+                <Label Text="Ocupación:"/>
+                <Entry x:Name="OcupacionEntry"/>
+
+                <Label Text="Teléfono:"/>
+                <Entry x:Name="TelefonoEntry" Keyboard="Telephone"/>
+
+                <Label Text="Email:"/>
+                <Entry x:Name="CorreoEntry" Keyboard="Email"/>
+
+                <Label Text="Nacionalidad:"/>
+                <Picker x:Name="LugarPicker" Title="Seleccionar" ItemsSource="{Binding Paises}"/>
+
+                <Label Text="Idiomas:"/>
+                <ListView x:Name="IdiomasListView" ItemsSource="{Binding Idiomas}" SelectionMode="Multiple"/>
+
+                <Button Text="Agregar otro idioma" Clicked="AgregarIdioma_Clicked"/>
+
+                <Label Text="Niveles:"/>
+                <StackLayout>
+                    <RadioButton Content="Básico" GroupName="Nivel" x:Name="BasicoRadioButton"/>
+                    <RadioButton Content="Intermedio" GroupName="Nivel" x:Name="IntermedioRadioButton"/>
+                    <RadioButton Content="Avanzado" GroupName="Avanzado" x:Name="AvanzadoRadioButton"/>
+                    <RadioButton Content="Fluido" GroupName="Nivel" x:Name="FluidoRadioButton"/>
+                </StackLayout>
+
+                <Label Text="Aptitudes:"/>
+                <ListView x:Name="AptitudesListView" ItemsSource="{Binding Aptitudes}" SelectionMode="Multiple"/>
+                <Button Text="Agregar otra aptitud" Clicked="AgregarAptitud_Clicked"/>
+
+                <Label Text="Habilidades:"/>
+                <StackLayout>
+                    <CheckBox Content="Inteligencia emocional" x:Name="Habilidad1CheckBox"/>
+                    <CheckBox Content="Espíritu crítico" x:Name="Habilidad2CheckBox"/>
+                    <CheckBox Content="Trabajo en equipo" x:Name="Habilidad3CheckBox"/>
+                    <CheckBox Content="Capacidad analítica" x:Name="Habilidad4CheckBox"/>
+                    <CheckBox Content="Habilidades físicas" x:Name="Habilidad5CheckBox"/>
+                </StackLayout>
+
+                <Label Text="Lenguajes de programación:"/>
+                <ListView x:Name="LenguajesListView" ItemsSource="{Binding Lenguajes}" SelectionMode="Multiple"/>
+                <Button Text="Agregar otro lenguaje" Clicked="AgregarLenguaje_Clicked"/>
+
+                <Label Text="Perfil:"/>
+                <Editor x:Name="PerfilEditor" HeightRequest="100"/>
+
+                <Label Text="Experiencia laboral"/>
+                <StackLayout x:Name="ExperienciaStackLayout">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Puesto:"/>
+                        <Entry x:Name="PuestoEntry"/>
+                        <Label Text="Empresa:"/>
+                        <Entry x:Name="EmpresaEntry"/>
+                        <Label Text="Período:"/>
+                        <Entry x:Name="PeriodoEntry"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <Label Text="Formación académica"/>
+                <StackLayout x:Name="FormacionStackLayout">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Grado:"/>
+                        <Entry x:Name="GradoEntry"/>
+                        <Label Text="Institución:"/>
+                        <Entry x:Name="InstitucionEntry"/>
+                        <Label Text="Período de formación:"/>
+                        <Entry x:Name="PeriodoFormacionEntry"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <Button Text="Enviar" Clicked="Enviar_Clicked"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
