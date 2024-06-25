@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="YourAppNamespace.RegisterPage"
+             Title="Registro">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Formulario de Registro" FontSize="24" HorizontalOptions="Center" TextColor="{StaticResource PrimaryColor}" />
+
+                <Label Text="Nombre:" />
+                <Entry Placeholder="Introduce tu nombre" />
+
+                <Label Text="Fecha de Nacimiento:" />
+                <DatePicker />
+
+                <Label Text="Ocupación:" />
+                <Entry Placeholder="Introduce tu ocupación" />
+
+                <Label Text="Teléfono:" />
+                <Entry Placeholder="Introduce tu teléfono" Keyboard="Telephone" />
+
+                <Label Text="Correo:" />
+                <Entry Placeholder="Introduce tu correo" Keyboard="Email" />
+
+                <Label Text="Lugar:" />
+                <Entry Placeholder="Introduce tu lugar" />
+
+                <Button Text="Registrar" Clicked="OnRegisterClicked" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
