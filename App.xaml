@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="YourAppNamespace.App">
+    <Application.Resources>
+        <!-- Define los estilos globales aquí -->
+        <ResourceDictionary>
+            <Color x:Key="PrimaryColor">#648ec1</Color>
+            <Color x:Key="SecondaryColor">#4f7faa</Color>
+            <Color x:Key="BackgroundColor">#f4f4f4</Color>
+            <Color x:Key="TextColor">#555</Color>
+
+            <Style TargetType="ContentPage">
+                <Setter Property="BackgroundColor" Value="{StaticResource BackgroundColor}" />
+                <Setter Property="Padding" Value="20" />
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="FontFamily" Value="Arial" />
+                <Setter Property="TextColor" Value="{StaticResource TextColor}" />
+                <Setter Property="Margin" Value="0,0,0,10" />
+            </Style>
+
+            <Style TargetType="Entry">
+                <Setter Property="FontFamily" Value="Arial" />
+                <Setter Property="BackgroundColor" Value="#fff" />
+                <Setter Property="TextColor" Value="#000" />
+                <Setter Property="Padding" Value="12" />
+                <Setter Property="Margin" Value="0,0,0,20" />
+                <Setter Property="HeightRequest" Value="50" />
+                <Setter Property="CornerRadius" Value="5" />
+                <Setter Property="BorderColor" Value="#ccc" />
+            </Style>
+
+            <Style TargetType="Button">
+                <Setter Property="FontFamily" Value="Arial" />
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}" />
+                <Setter Property="TextColor" Value="#fff" />
+                <Setter Property="HeightRequest" Value="50" />
+                <Setter Property="CornerRadius" Value="5" />
+                <Setter Property="Padding" Value="12,0" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
